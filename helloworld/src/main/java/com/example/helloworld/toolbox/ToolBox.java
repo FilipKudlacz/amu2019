@@ -17,6 +17,13 @@ public class ToolBox {
     @Autowired
     private List<ITool> tools;
 
+    private ITool anonimousTool = new ITool(){
+        @Override
+        public void use() {
+            System.out.println("Using a anonimous tool");
+        }
+    };
+
     @PreDestroy
     public void main() {
         tool.use();
