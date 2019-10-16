@@ -14,7 +14,7 @@ import javax.annotation.PreDestroy;
 @Component
 public class ScopesShowcase {
 
-    private final static Logger logger = LoggerFactory.getLogger(Hammer.class);
+    private final static Logger logger = LoggerFactory.getLogger(ScopesShowcase.class);
 
 
     @Autowired
@@ -37,6 +37,6 @@ public class ScopesShowcase {
         logger.info(contextSingletonBean.toString());
         logger.info(contextPrototypeBean.toString());
         */
-        
+
     }
 }
