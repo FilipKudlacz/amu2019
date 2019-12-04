@@ -2,6 +2,7 @@ package pl.edu.amu.advjava;
 
 import java.util.function.IntSupplier;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 final class FibonacciNumbersExercise {
 
@@ -18,19 +19,23 @@ final class FibonacciNumbersExercise {
      */
     static int[] generateFibonacciNumbersWithLambda(int n) {
         return IntStream.generate(() -> {
-            // TODO add implementation here
-            throw new UnsupportedOperationException("Not yet implemented");
-        }).limit(n).toArray();
+            Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1], t[0] + t[1]}).limit(n).toArray();
+        }
     }
 
 }
 
 final class FibonacciSupplier implements IntSupplier {
 
+    private int a = 0;
+    private int b = 1;
+
     @Override
     public int getAsInt() {
-        // TODO add implementation here
-        throw new UnsupportedOperationException("Not yet implemented");
+        int c = b;
+        b = a+b;
+        a = c;
+        return a;
     }
 }
 

@@ -11,7 +11,7 @@ final class StreamExcercises {
          ZADANIE: dla podanej kolekcji zwróć sumę opakowanych liczb.
      */
     static int sum(Collection<CustomNumber> numbers) {
-        throw new UnsupportedOperationException();
+        return numbers.map();
     }
 
     /*
